@@ -1,0 +1,38 @@
+{
+  "name": "genpark-nile-multitenant-saas-db-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Nile-like serverless PostgreSQL virtual tenant and RAG isolator.",
+  "author": "genpark",
+  "category": "operations",
+  "tags": [
+    "postgres",
+    "nile",
+    "database",
+    "multitenancy",
+    "saas"
+  ],
+  "inputs": {
+    "tenant_id": {
+      "type": "string"
+    },
+    "sql_query": {
+      "type": "string"
+    },
+    "vector_query_embedding": {
+      "type": "array"
+    }
+  },
+  "outputs": {
+    "isolated_sql_statement": {
+      "type": "string"
+    },
+    "tenant_authorized": {
+      "type": "boolean"
+    },
+    "vector_matches_count": {
+      "type": "integer"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
